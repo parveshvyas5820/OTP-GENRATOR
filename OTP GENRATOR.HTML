@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<style>
+.box{
+    width: 100%;
+    height: 200px;
+    background-color: yellow;
+    text-align: center;
+    border: 2px solid black;
+}
+
+</style>
+<body>
+   
+    <div class="box">
+        <div  style="border:2px solid red ;margin-left: 10px;margin-top: 10px;margin-right: 10px;" class="div">
+       
+        <h1>THIS is your OTP:-</h1>
+        <h1 style="background-color:paleturquoise ;color: rgb(115, 47, 47);" id="otp"></h1>
+    
+        <H2><button  style="background-color: red;color: green;font-size: 20px;" type="button" onclick="generate()">GENRATE THE OTP</button></H2>
+       
+</div>
+    </div>
+
+
+   
+    <script>
+
+
+
+function generate(){
+    let A ='1234567890';
+    let OTP='';
+    for( let i=0;i<10;i++){
+
+      
+        OTP +=A[Math.floor(Math.random()*10)];
+    }
+    document.getElementById('otp').innerHTML=OTP;
+}
+
+
+    </script>
+
+
+    
+</body>
+</html>
